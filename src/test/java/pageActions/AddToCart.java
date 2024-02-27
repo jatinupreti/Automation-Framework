@@ -1,5 +1,6 @@
 package pageActions;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
@@ -19,6 +20,7 @@ public class AddToCart extends BaseClass{
 	public void clickOnAddToCartButton() {
 		clickOnElement(element(AddToCartBtn));
 		logMessage("user clicked on add to cart button");
+//		Assert.fail();
 	}
 
 }

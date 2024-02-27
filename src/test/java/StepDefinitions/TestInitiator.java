@@ -27,6 +27,9 @@ public class TestInitiator extends BaseClass{
 			File ss = screenshot.getScreenshotAs(OutputType.FILE);
 			File destination = new File("./FailedScenarios/ScreenShot.png");
 			FileUtils.copyFile(ss, destination);
+			
+			byte[] src = screenshot.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(src, "image/png", "screenshot");
 		}
 		System.out.println("********"+scenario.getStatus()+"*************");
 		tearDown();
