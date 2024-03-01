@@ -13,9 +13,9 @@ public class login extends BaseClass {
  * method is used to launch URL
  * @param takes the url we want to launch
  */
-	public void launchURL(String url) throws Exception {
+	public void launchURL(String url) {
 		driver.get(url);
-//		readfile("username");
+		logMessage("user launched URL: "+url);
 	}
 
 /*

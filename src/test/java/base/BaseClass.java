@@ -130,7 +130,7 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 		String arr[]= ele.split(":");
-		locatorValue= arr[1];
+		locatorValue= arr[1].trim();
 		locatorType = StringUtils.substringBetween(ele, "", ":");
 		
 		switch(locatorType) {

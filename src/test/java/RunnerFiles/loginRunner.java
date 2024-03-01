@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features="src\\test\\resources\\Features\\loginFeature.feature", glue="StepDefinitions"
-,plugin= {"pretty","html:target\\cucumber-reports.html"}, monochrome = true)
+,plugin= {"pretty","html:target\\cucumber-reports.html"})
 public class loginRunner {
 
 }

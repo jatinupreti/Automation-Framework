@@ -10,7 +10,7 @@ public class login_stepDef {
 	login loginTest = new login();
 	
 	@Given("^I launch '(.*)' url$")
-	public void launchApplicationURL(String url) throws Exception {
+	public void launchApplicationURL(String url) {
 		loginTest.launchURL(url);
 	}
 	
