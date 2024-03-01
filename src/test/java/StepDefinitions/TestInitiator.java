@@ -14,6 +14,10 @@ import io.cucumber.java.Scenario;
 
 public class TestInitiator extends BaseClass{
 	
+	public TestInitiator(){
+		super("TestInitiator");
+	}
+	
 	@Before
 	public void initiateBrowser(Scenario scenario) {
 		tearUp();

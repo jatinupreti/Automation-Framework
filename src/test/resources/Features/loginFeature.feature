@@ -7,6 +7,3 @@ Feature: Verify user can login
 	And I enter 'secret_sauce' in password field
 	When I click on Login button
 	Then I should be on Inventory page
-	
-
-

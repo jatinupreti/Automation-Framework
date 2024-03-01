@@ -1,26 +1,33 @@
 package pageActions;
 
-import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 import base.BaseClass;
 
 public class AddToCart extends BaseClass{
 	
-	By FilterOption = By.className("product_sort_container");
-	By AddToCartBtn = By.xpath("//button[@data-test='add-to-cart-sauce-labs-onesie']");
+	public AddToCart() {
+		super("AddToCart");
+	}
 	
-	public void selectFilterToProducts(String filter) {
-		Select select = new Select(element(FilterOption));
+	
+/*
+ * This method is used to select product filter on Inventory page
+ * @param takes the filter that we want to apply
+ */
+	public void selectFilterToProducts(String filter) throws Exception {
+		Select select = new Select(getElement("FilterOptionField"));
 		select.selectByVisibleText(filter);
 		logMessage("user selected filter: "+filter);
 	}
+
+/*
+ * clicks on Add to Cart button on Inventory page
+ */
 	
-	public void clickOnAddToCartButton() {
-		clickOnElement(element(AddToCartBtn));
+	public void clickOnAddToCartButton() throws Exception {
+		clickOnElement(getElement("addToCartButton"));
 		logMessage("user clicked on add to cart button");
-//		Assert.fail();
 	}
 
 }

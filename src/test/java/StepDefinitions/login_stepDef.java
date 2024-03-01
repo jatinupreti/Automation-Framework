@@ -1,18 +1,17 @@
 package StepDefinitions;
 
-import base.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageActions.login;
 
-public class login_stepDef extends BaseClass{
+public class login_stepDef {
 	
 	login loginTest = new login();
 	
 	@Given("^I launch '(.*)' url$")
-	public void launchApplicationURL(String url) {
-		launchApplication(url);
+	public void launchApplicationURL(String url) throws Exception {
+		loginTest.launchURL(url);
 	}
 	
 	@Then("^I verify that user is on login page$")
